@@ -2,4 +2,4 @@ function AsRender(): JSX.Element {
   return <div>As</div>;
 }
 
-export { AsRender };
+export default AsRender;

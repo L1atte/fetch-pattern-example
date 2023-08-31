@@ -1,10 +1,15 @@
-function sleep(delay: number): Promise<unknown> {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function sleep(delay: number): Promise<any> {
   return new Promise(r => setTimeout(r, delay));
 }
 
-function fetcher(url: string) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function fetcher(url: string): Promise<any> {
+  console.log('url', url);
   return sleep(1000).then(() => {
-    url;
+    return {
+      url,
+    };
   });
 }
 
